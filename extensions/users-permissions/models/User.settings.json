@@ -62,6 +62,10 @@
     "categories": {
       "via": "user",
       "collection": "categories"
+    },
+    "words": {
+      "via": "user",
+      "collection": "words"
     }
   }
 }

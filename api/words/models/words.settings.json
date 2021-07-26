@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "words",
+  "info": {
+    "name": "words"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "correct_counts": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "incorrect_counts": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "words"
+    },
+    "category": {
+      "model": "categories",
+      "via": "words"
+    }
+  }
+}
