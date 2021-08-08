@@ -623,6 +623,20 @@
               }
             }
           },
+          "color": {
+            "type": "string",
+            "default": "secondary",
+            "enum": [
+              "primary",
+              "secondary",
+              "success",
+              "danger",
+              "warning",
+              "info",
+              "light",
+              "dark"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -645,6 +659,20 @@
             "items": {
               "type": "string"
             }
+          },
+          "color": {
+            "type": "string",
+            "default": "secondary",
+            "enum": [
+              "primary",
+              "secondary",
+              "success",
+              "danger",
+              "warning",
+              "info",
+              "light",
+              "dark"
+            ]
           },
           "published_at": {
             "type": "string",

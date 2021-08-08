@@ -614,6 +614,19 @@
                   "type": "string"
                 }
               },
+              "color": {
+                "type": "string",
+                "enum": [
+                  "primary",
+                  "secondary",
+                  "success",
+                  "danger",
+                  "warning",
+                  "info",
+                  "light",
+                  "dark"
+                ]
+              },
               "published_at": {
                 "type": "string"
               },
