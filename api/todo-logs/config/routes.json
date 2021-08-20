@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/todo-logs",
+      "handler": "todo-logs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/todo-logs/count",
+      "handler": "todo-logs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/todo-logs/:id",
+      "handler": "todo-logs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/todo-logs",
+      "handler": "todo-logs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/todo-logs/:id",
+      "handler": "todo-logs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/todo-logs/:id",
+      "handler": "todo-logs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

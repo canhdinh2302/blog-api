@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/words": {
+    "/todos": {
       "get": {
         "deprecated": false,
-        "description": "Find all the words's records",
+        "description": "Find all the todos's records",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todos document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Words"
+                    "$ref": "#/components/schemas/Todos"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todos"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new words record",
+        "description": "Create a new todos record",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Words"
+                  "$ref": "#/components/schemas/Todos"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todos"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWords"
+                "$ref": "#/components/schemas/NewTodos"
               }
             }
           }
         }
       }
     },
-    "/words/count": {
+    "/todos/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of words documents",
+        "description": "Retrieve the numver of todos documents",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todos"
         ],
         "parameters": []
       }
     },
-    "/words/{id}": {
+    "/todos/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one words record",
+        "description": "Find one todos record",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Words"
+                  "$ref": "#/components/schemas/Todos"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todos"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single words record",
+        "description": "Update a single todos record",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Words"
+                  "$ref": "#/components/schemas/Todos"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todos"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWords"
+                "$ref": "#/components/schemas/NewTodos"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single words record",
+        "description": "Delete a single todos record",
         "responses": {
           "200": {
-            "description": "deletes a single words based on the ID supplied",
+            "description": "deletes a single todos based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todos"
         ],
         "parameters": [
           {
@@ -514,72 +514,52 @@
   },
   "components": {
     "schemas": {
-      "Words": {
+      "Todos": {
         "required": [
-          "id",
-          "content",
-          "correct_counts",
-          "incorrect_counts"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "content": {
+          "name": {
             "type": "string"
           },
-          "correct_counts": {
-            "type": "integer",
-            "default": 0
-          },
-          "incorrect_counts": {
-            "type": "integer",
-            "default": 0
+          "date": {
+            "type": "string",
+            "format": "date"
           },
           "user": {
             "required": [
               "id",
-              "username",
-              "email"
+              "type",
+              "controller",
+              "action",
+              "enabled"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "type": {
                 "type": "string"
               },
-              "email": {
+              "controller": {
                 "type": "string"
               },
-              "provider": {
+              "action": {
                 "type": "string"
               },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
+              "enabled": {
                 "type": "boolean"
               },
-              "blocked": {
-                "type": "boolean"
+              "policy": {
+                "type": "string"
               },
               "role": {
                 "type": "string"
               },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "words": {
+              "todos": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -593,73 +573,83 @@
               }
             }
           },
-          "category": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "words": {
-                "type": "array",
-                "items": {
+          "type": {
+            "type": "string",
+            "default": "one_time",
+            "enum": [
+              "monthly",
+              "weekly",
+              "daily",
+              "one_time"
+            ]
+          },
+          "time": {
+            "type": "string"
+          },
+          "todo_logs": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "todo": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "done",
+                    "missed"
+                  ]
+                },
+                "duration_time": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
                   "type": "string"
                 }
-              },
-              "color": {
-                "type": "string",
-                "enum": [
-                  "primary",
-                  "secondary",
-                  "success",
-                  "danger",
-                  "warning",
-                  "info",
-                  "light",
-                  "dark"
-                ]
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           }
         }
       },
-      "NewWords": {
-        "required": [
-          "content",
-          "correct_counts",
-          "incorrect_counts"
-        ],
+      "NewTodos": {
         "properties": {
-          "content": {
+          "name": {
             "type": "string"
           },
-          "correct_counts": {
-            "type": "integer",
-            "default": 0
-          },
-          "incorrect_counts": {
-            "type": "integer",
-            "default": 0
+          "date": {
+            "type": "string",
+            "format": "date"
           },
           "user": {
             "type": "string"
           },
-          "category": {
+          "type": {
+            "type": "string",
+            "default": "one_time",
+            "enum": [
+              "monthly",
+              "weekly",
+              "daily",
+              "one_time"
+            ]
+          },
+          "time": {
             "type": "string"
+          },
+          "todo_logs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -673,7 +663,7 @@
   },
   "tags": [
     {
-      "name": "Words"
+      "name": "Todos"
     }
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todo_logs",
+  "info": {
+    "name": "todo_logs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "todo": {
+      "model": "todos",
+      "via": "todo_logs"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "done",
+        "missed"
+      ],
+      "default": "missed"
+    },
+    "duration_time": {
+      "type": "time"
+    }
+  }
+}

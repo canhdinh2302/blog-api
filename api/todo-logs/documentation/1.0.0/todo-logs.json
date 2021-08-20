@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/words": {
+    "/todo-logs": {
       "get": {
         "deprecated": false,
-        "description": "Find all the words's records",
+        "description": "Find all the todo-logs's records",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todo-logs document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Words"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todo-logs"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new words record",
+        "description": "Create a new todo-logs record",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Words"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Words"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewWords"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/words/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of words documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todo-logs document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todo-logs"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTodo-logs"
+              }
+            }
+          }
+        }
       }
     },
-    "/words/{id}": {
+    "/todo-logs/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one words record",
+        "description": "Retrieve the numver of todo-logs documents",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todo-logs document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Words"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todo-logs"
+        ],
+        "parameters": []
+      }
+    },
+    "/todo-logs/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one todo-logs record",
+        "responses": {
+          "200": {
+            "description": "Retrieve todo-logs document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Todo-logs"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single words record",
+        "description": "Update a single todo-logs record",
         "responses": {
           "200": {
-            "description": "Retrieve words document(s)",
+            "description": "Retrieve todo-logs document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Words"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todo-logs"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWords"
+                "$ref": "#/components/schemas/NewTodo-logs"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single words record",
+        "description": "Delete a single todo-logs record",
         "responses": {
           "200": {
-            "description": "deletes a single words based on the ID supplied",
+            "description": "deletes a single todo-logs based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Words"
+          "Todo-logs"
         ],
         "parameters": [
           {
@@ -514,89 +527,17 @@
   },
   "components": {
     "schemas": {
-      "Words": {
+      "Todo-logs": {
         "required": [
-          "id",
-          "content",
-          "correct_counts",
-          "incorrect_counts"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "content": {
-            "type": "string"
-          },
-          "correct_counts": {
-            "type": "integer",
-            "default": 0
-          },
-          "incorrect_counts": {
-            "type": "integer",
-            "default": 0
-          },
-          "user": {
+          "todo": {
             "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "words": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "category": {
-            "required": [
-              "id",
-              "name"
+              "id"
             ],
             "properties": {
               "id": {
@@ -605,27 +546,29 @@
               "name": {
                 "type": "string"
               },
+              "date": {
+                "type": "string"
+              },
               "user": {
                 "type": "string"
               },
-              "words": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "monthly",
+                  "weekly",
+                  "daily",
+                  "one_time"
+                ]
+              },
+              "time": {
+                "type": "string"
+              },
+              "todo_logs": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
-              },
-              "color": {
-                "type": "string",
-                "enum": [
-                  "primary",
-                  "secondary",
-                  "success",
-                  "danger",
-                  "warning",
-                  "info",
-                  "light",
-                  "dark"
-                ]
               },
               "created_by": {
                 "type": "string"
@@ -634,31 +577,34 @@
                 "type": "string"
               }
             }
+          },
+          "status": {
+            "type": "string",
+            "default": "missed",
+            "enum": [
+              "done",
+              "missed"
+            ]
+          },
+          "duration_time": {
+            "type": "string"
           }
         }
       },
-      "NewWords": {
-        "required": [
-          "content",
-          "correct_counts",
-          "incorrect_counts"
-        ],
+      "NewTodo-logs": {
         "properties": {
-          "content": {
+          "todo": {
             "type": "string"
           },
-          "correct_counts": {
-            "type": "integer",
-            "default": 0
+          "status": {
+            "type": "string",
+            "default": "missed",
+            "enum": [
+              "done",
+              "missed"
+            ]
           },
-          "incorrect_counts": {
-            "type": "integer",
-            "default": 0
-          },
-          "user": {
-            "type": "string"
-          },
-          "category": {
+          "duration_time": {
             "type": "string"
           },
           "created_by": {
@@ -671,9 +617,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Words"
-    }
-  ]
+  "tags": []
 }

@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "words",
   "info": {
-    "name": "words"
+    "name": "words",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -31,8 +32,8 @@
       "via": "words"
     },
     "category": {
-      "model": "categories",
-      "via": "words"
+      "via": "words",
+      "model": "categories"
     }
   }
 }
