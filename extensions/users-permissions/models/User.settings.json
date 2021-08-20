@@ -58,14 +58,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "categories": {
-      "via": "user",
-      "collection": "categories"
-    },
-    "words": {
-      "via": "user",
-      "collection": "words"
     }
   }
 }
