@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/todo-logs",
-      "handler": "todo-logs.find",
+      "path": "/categories",
+      "handler": "categories.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/todo-logs/count",
-      "handler": "todo-logs.count",
+      "path": "/categories/count",
+      "handler": "categories.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/todo-logs/:id",
-      "handler": "todo-logs.findOne",
+      "path": "/categories/:id",
+      "handler": "categories.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/todo-logs",
-      "handler": "todo-logs.create",
+      "path": "/categories",
+      "handler": "categories.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/todo-logs/:id",
-      "handler": "todo-logs.update",
+      "path": "/categories/:id",
+      "handler": "categories.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/todo-logs/:id",
-      "handler": "todo-logs.delete",
+      "path": "/categories/:id",
+      "handler": "categories.delete",
       "config": {
         "policies": []
       }

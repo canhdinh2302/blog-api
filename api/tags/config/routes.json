@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/todos",
-      "handler": "todos.find",
+      "path": "/tags",
+      "handler": "tags.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/todos/count",
-      "handler": "todos.count",
+      "path": "/tags/count",
+      "handler": "tags.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/todos/:id",
-      "handler": "todos.findOne",
+      "path": "/tags/:id",
+      "handler": "tags.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/todos",
-      "handler": "todos.create",
+      "path": "/tags",
+      "handler": "tags.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/todos/:id",
-      "handler": "todos.update",
+      "path": "/tags/:id",
+      "handler": "tags.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/todos/:id",
-      "handler": "todos.delete",
+      "path": "/tags/:id",
+      "handler": "tags.delete",
       "config": {
         "policies": []
       }
