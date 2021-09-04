@@ -16,9 +16,13 @@
       "required": true
     },
     "blogs": {
-      "collection": "blogs",
       "via": "tags",
+      "collection": "blogs",
       "dominant": true
+    },
+    "collection_info": {
+      "via": "tags",
+      "model": "collections"
     }
   }
 }

@@ -1251,70 +1251,27 @@
               }
             }
           },
-          "categories": {
+          "votes": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "name"
+                "point"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
-                  "type": "string"
-                },
                 "user": {
                   "type": "string"
                 },
-                "words": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
+                "blog": {
                   "type": "string"
                 },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "words": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "content",
-                "correct_counts",
-                "incorrect_counts"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "correct_counts": {
+                "point": {
                   "type": "integer"
                 },
-                "incorrect_counts": {
-                  "type": "integer"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "published_at": {
+                "collection_info": {
                   "type": "string"
                 },
                 "created_by": {
@@ -1367,13 +1324,7 @@
           "role": {
             "type": "string"
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "words": {
+          "votes": {
             "type": "array",
             "items": {
               "type": "string"

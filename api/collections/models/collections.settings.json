@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "name": "collections"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "blogs": {
+      "collection": "blogs",
+      "via": "collection_info"
+    },
+    "votes": {
+      "collection": "votes",
+      "via": "collection_info"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "collection_info"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    }
+  }
+}

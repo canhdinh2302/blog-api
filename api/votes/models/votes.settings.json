@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "votes",
+  "info": {
+    "name": "votes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "votes"
+    },
+    "blog": {
+      "model": "blogs",
+      "via": "votes"
+    },
+    "point": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "collection_info": {
+      "via": "votes",
+      "model": "collections"
+    }
+  }
+}
