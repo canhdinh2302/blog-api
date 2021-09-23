@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/blogs/:slug/slug",
+      "handler": "blogs.findOneSlug",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/blogs/:id",
       "handler": "blogs.findOne",
       "config": {
