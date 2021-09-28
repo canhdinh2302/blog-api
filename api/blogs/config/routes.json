@@ -5,7 +5,7 @@
       "path": "/blogs",
       "handler": "blogs.find",
       "config": {
-        "policies": []
+        "policies": ["blogs.formatMany"]
       }
     },
     {
@@ -21,7 +21,7 @@
       "path": "/blogs/:slug/slug",
       "handler": "blogs.findOneSlug",
       "config": {
-        "policies": []
+        "policies": ["blogs.formatOne"]
       }
     },
     {
@@ -29,7 +29,7 @@
       "path": "/blogs/:id",
       "handler": "blogs.findOne",
       "config": {
-        "policies": []
+        "policies": ["blogs.formatOne"]
       }
     },
     {
@@ -37,7 +37,7 @@
       "path": "/blogs",
       "handler": "blogs.create",
       "config": {
-        "policies": []
+        "policies": ["blogs.formatOne"]
       }
     },
     {
@@ -45,7 +45,7 @@
       "path": "/blogs/:id",
       "handler": "blogs.update",
       "config": {
-        "policies": []
+        "policies": ["blogs.formatOne"]
       }
     },
     {
@@ -53,7 +53,7 @@
       "path": "/blogs/:id",
       "handler": "blogs.delete",
       "config": {
-        "policies": []
+        "policies": ["blogs.formatOne"]
       }
     }
   ]
