@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/blogs/:slug/vote",
+      "handler": "blogs.vote",
+      "config": {
+        "policies": ["blogs.formatOne"]
+      }
+    },
+    {
       "method": "GET",
       "path": "/blogs/:id",
       "handler": "blogs.findOne",
