@@ -32,8 +32,8 @@
       "pluginOptions": {}
     },
     "categories": {
-      "collection": "categories",
       "via": "blogs",
+      "collection": "categories",
       "dominant": true
     },
     "tags": {

@@ -12,8 +12,11 @@
   "devDependencies": {},
   "dependencies": {
     "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
     "knex": "0.21.18",
+    "lodash": "^4.17.21",
     "mongoose": "^6.0.8",
+    "slugify": "^1.6.1",
     "strapi": "3.6.5",
     "strapi-admin": "3.6.5",
     "strapi-connector-mongoose": "^3.6.8",
