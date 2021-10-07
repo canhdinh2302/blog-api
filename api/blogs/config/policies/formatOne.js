@@ -5,6 +5,8 @@ module.exports = async (ctx, next) => {
 
   const blog = {...ctx.body}
 
+  if ([401, 404].includes(ctx.status)) return
+
   if (!blog.id) {
     ctx.response.notFound()
     return
