@@ -1,9 +1,9 @@
-const formatVote = require('./format');
+const formatVote = require('./format')
 
 module.exports = async (ctx, next) => {
-  await next();
+  await next()
 
-  const blog = {...ctx.body}
+  const blog = { ...ctx.body }
 
   if ([401, 404].includes(ctx.status)) return
 
@@ -14,6 +14,6 @@ module.exports = async (ctx, next) => {
 
   ctx.body = {
     ...blog,
-    votes: formatVote(blog.votes, ctx.state.user)
+    votes: formatVote(blog.votes, ctx.state.user),
   }
-};
+}

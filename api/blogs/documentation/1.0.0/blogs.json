@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "parameters": []
       }
     },
@@ -362,9 +356,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "parameters": [
           {
             "name": "slug",
@@ -430,9 +422,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -497,9 +487,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "parameters": [
           {
             "name": "id",
@@ -559,9 +547,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -633,9 +619,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Blogs"
-        ],
+        "tags": ["Blogs"],
         "parameters": [
           {
             "name": "id",
@@ -654,13 +638,7 @@
   "components": {
     "schemas": {
       "Blogs": {
-        "required": [
-          "id",
-          "title",
-          "content",
-          "cover",
-          "slug"
-        ],
+        "required": ["id", "title", "content", "cover", "slug"],
         "properties": {
           "id": {
             "type": "string"
@@ -675,15 +653,7 @@
           "cover": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
+              "required": ["id", "name", "hash", "mime", "size", "url", "provider"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -745,10 +715,7 @@
           "categories": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name"
-              ],
+              "required": ["id", "name"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -777,10 +744,7 @@
           "tags": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name"
-              ],
+              "required": ["id", "name"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -812,10 +776,7 @@
           "votes": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "point"
-              ],
+              "required": ["id", "point"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -842,11 +803,7 @@
             }
           },
           "collection_info": {
-            "required": [
-              "id",
-              "name",
-              "slug"
-            ],
+            "required": ["id", "name", "slug"],
             "properties": {
               "id": {
                 "type": "string"
@@ -886,11 +843,7 @@
         }
       },
       "NewBlogs": {
-        "required": [
-          "title",
-          "content",
-          "slug"
-        ],
+        "required": ["title", "content", "slug"],
         "properties": {
           "title": {
             "type": "string",

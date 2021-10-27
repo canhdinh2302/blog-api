@@ -12,14 +12,14 @@ module.exports = ({ env }) => {
           upload: {},
           delete: {},
         },
-      }
+      },
     }
   }
 
   return {
-    provider: "local",
+    provider: 'local',
     providerOptions: {
-      "sizeLimit": 100000
-    }
+      'sizeLimit': 100000,
+    },
   }
 }

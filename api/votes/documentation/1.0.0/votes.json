@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Votes"
-        ],
+        "tags": ["Votes"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Votes"
-        ],
+        "tags": ["Votes"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Votes"
-        ],
+        "tags": ["Votes"],
         "parameters": []
       }
     },
@@ -358,9 +352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Votes"
-        ],
+        "tags": ["Votes"],
         "parameters": [
           {
             "name": "id",
@@ -420,9 +412,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Votes"
-        ],
+        "tags": ["Votes"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -494,9 +484,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Votes"
-        ],
+        "tags": ["Votes"],
         "parameters": [
           {
             "name": "id",
@@ -515,20 +503,13 @@
   "components": {
     "schemas": {
       "Votes": {
-        "required": [
-          "id",
-          "point"
-        ],
+        "required": ["id", "point"],
         "properties": {
           "id": {
             "type": "string"
           },
           "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
+            "required": ["id", "username", "email"],
             "properties": {
               "id": {
                 "type": "string"
@@ -575,13 +556,7 @@
             }
           },
           "blog": {
-            "required": [
-              "id",
-              "title",
-              "content",
-              "cover",
-              "slug"
-            ],
+            "required": ["id", "title", "content", "cover", "slug"],
             "properties": {
               "id": {
                 "type": "string"
@@ -635,11 +610,7 @@
             "default": 0
           },
           "collection_info": {
-            "required": [
-              "id",
-              "name",
-              "slug"
-            ],
+            "required": ["id", "name", "slug"],
             "properties": {
               "id": {
                 "type": "string"
@@ -679,9 +650,7 @@
         }
       },
       "NewVotes": {
-        "required": [
-          "point"
-        ],
+        "required": ["point"],
         "properties": {
           "user": {
             "type": "string"

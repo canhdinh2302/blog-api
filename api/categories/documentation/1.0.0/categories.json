@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "parameters": []
       }
     },
@@ -358,9 +352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "parameters": [
           {
             "name": "id",
@@ -420,9 +412,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -494,9 +484,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Categories"
-        ],
+        "tags": ["Categories"],
         "parameters": [
           {
             "name": "id",
@@ -515,10 +503,7 @@
   "components": {
     "schemas": {
       "Categories": {
-        "required": [
-          "id",
-          "name"
-        ],
+        "required": ["id", "name"],
         "properties": {
           "id": {
             "type": "string"
@@ -529,13 +514,7 @@
           "blogs": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "title",
-                "content",
-                "cover",
-                "slug"
-              ],
+              "required": ["id", "title", "content", "cover", "slug"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -591,9 +570,7 @@
         }
       },
       "NewCategories": {
-        "required": [
-          "name"
-        ],
+        "required": ["name"],
         "properties": {
           "name": {
             "type": "string"

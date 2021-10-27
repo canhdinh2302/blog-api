@@ -4,18 +4,14 @@ require('dotenv').config()
 
 const Categories = mongoose.model('categories', {
   name: String,
-  slug: String
+  slug: String,
 })
 
-const categorieNames = [
-  'ReactJs',
-  'Javascript',
-  'jQuery'
-]
+const categorieNames = ['ReactJs', 'Javascript', 'jQuery']
 
-const data = categorieNames.map(name => ({
+const data = categorieNames.map((name) => ({
   name,
-  slug: slugify(name).toLowerCase()
+  slug: slugify(name).toLowerCase(),
 }))
 
 const seed = async () => {

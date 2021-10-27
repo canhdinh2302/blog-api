@@ -50,9 +50,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Collections"
-        ],
+        "tags": ["Collections"],
         "parameters": [
           {
             "name": "_limit",
@@ -238,9 +236,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Collections"
-        ],
+        "tags": ["Collections"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -305,9 +301,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Collections"
-        ],
+        "tags": ["Collections"],
         "parameters": []
       }
     },
@@ -358,9 +352,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Collections"
-        ],
+        "tags": ["Collections"],
         "parameters": [
           {
             "name": "id",
@@ -420,9 +412,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Collections"
-        ],
+        "tags": ["Collections"],
         "requestBody": {
           "description": "",
           "required": true,
@@ -494,9 +484,7 @@
           }
         },
         "summary": "",
-        "tags": [
-          "Collections"
-        ],
+        "tags": ["Collections"],
         "parameters": [
           {
             "name": "id",
@@ -515,11 +503,7 @@
   "components": {
     "schemas": {
       "Collections": {
-        "required": [
-          "id",
-          "name",
-          "slug"
-        ],
+        "required": ["id", "name", "slug"],
         "properties": {
           "id": {
             "type": "string"
@@ -530,13 +514,7 @@
           "blogs": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "title",
-                "content",
-                "cover",
-                "slug"
-              ],
+              "required": ["id", "title", "content", "cover", "slug"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -589,10 +567,7 @@
           "votes": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "point"
-              ],
+              "required": ["id", "point"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -621,10 +596,7 @@
           "tags": {
             "type": "array",
             "items": {
-              "required": [
-                "id",
-                "name"
-              ],
+              "required": ["id", "name"],
               "properties": {
                 "id": {
                   "type": "string"
@@ -656,10 +628,7 @@
         }
       },
       "NewCollections": {
-        "required": [
-          "name",
-          "slug"
-        ],
+        "required": ["name", "slug"],
         "properties": {
           "name": {
             "type": "string"

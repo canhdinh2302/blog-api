@@ -31,12 +31,12 @@ Hãy lưu ý là các trình duyệt web phổ biến cũng hỗ trợ việc ng
 const seed = async () => {
   await mongoose.connect(process.env.DATABASE_URI)
   try {
-    const imgs = await mongoose.connection.collection("upload_file").find({}).toArray()
-    const categories = await mongoose.connection.collection("categories").find({}).toArray()
+    const imgs = await mongoose.connection.collection('upload_file').find({}).toArray()
+    const categories = await mongoose.connection.collection('categories').find({}).toArray()
     const imgIDs = imgs.map(({ _id }) => _id)
     const categoryIDs = categories.map(({ _id }) => _id)
 
-    const blogs = Array.from(Array(30).keys()).map(_index => {
+    const blogs = Array.from(Array(30).keys()).map((_index) => {
       const title = faker.name.jobTitle()
 
       return {
@@ -44,7 +44,7 @@ const seed = async () => {
         slug: slugify(title).toLowerCase(),
         content: fixedContent,
         categories: [sample(categoryIDs)],
-        cover: sample(imgIDs)
+        cover: sample(imgIDs),
       }
     })
 

@@ -9,7 +9,9 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "2.4.1"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "faker": "^5.5.3",
@@ -17,7 +19,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.0.8",
     "slugify": "^1.6.1",
-    "strapi": "3.6.5",
+    "strapi": "^3.6.8",
     "strapi-admin": "3.6.5",
     "strapi-connector-mongoose": "^3.6.8",
     "strapi-plugin-content-manager": "3.6.5",

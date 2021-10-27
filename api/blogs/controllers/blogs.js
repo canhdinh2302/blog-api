@@ -1,5 +1,5 @@
-'use strict';
-const { sanitizeEntity } = require('strapi-utils');
+'use strict'
+const { sanitizeEntity } = require('strapi-utils')
 /**
  * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
  * to customize this controller
@@ -7,7 +7,7 @@ const { sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
   async findOneSlug(ctx) {
-    const { slug } = ctx.params;
+    const { slug } = ctx.params
     const blog = await strapi.services.blogs.findOne({ slug })
     return sanitizeEntity(blog, { model: strapi.models.blogs })
   },
@@ -37,12 +37,12 @@ module.exports = {
       vote = await strapi.services.votes.create({
         blog: blog.id,
         user: currentUser.id,
-        point
+        point,
       })
     }
 
     blog = await strapi.services.blogs.findOne({ slug })
 
     return sanitizeEntity(blog, { model: strapi.models.blogs })
-  }
+  },
 }
