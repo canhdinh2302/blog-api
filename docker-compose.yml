@@ -1,0 +1,37 @@
+version: '3'
+services:
+  strapi:
+    image: strapi/strapi
+    environment:
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_JWT_SECRET: ${JWT_SECRET}
+
+      DATABASE_URI: mongodb://mongo:27017/${DATABASE_NAME}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_SSL: ${DATABASE_SSL}
+
+      CLOUDINARY_KEY: ${CLOUDINARY_KEY}
+      CLOUDINARY_NAME: ${CLOUDINARY_NAME}
+      CLOUDINARY_SECRET: ${CLOUDINARY_SECRET}
+
+      NODE_ENV: ${NODE_ENV}
+    volumes:
+      - ./:/srv/app
+    ports:
+      - '1337:1337'
+    depends_on:
+      - mongo
+    command: bash -c "chmod +x ./start.sh && ./start.sh"
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: ${DATABASE_NAME}
+    volumes:
+      - mongo:/data/db
+      - mongoConfig:/data/configdb
+    ports:
+      - '27017:27017'
+volumes:
+  mongo:
+  mongoConfig:
