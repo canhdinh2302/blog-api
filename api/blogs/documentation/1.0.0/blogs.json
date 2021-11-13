@@ -253,7 +253,7 @@
     "/blogs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of blogs documents",
+        "description": "Retrieve the number of blogs documents",
         "responses": {
           "200": {
             "description": "Retrieve blogs document(s)",

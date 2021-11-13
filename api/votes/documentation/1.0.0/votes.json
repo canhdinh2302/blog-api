@@ -253,7 +253,7 @@
     "/votes/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of votes documents",
+        "description": "Retrieve the number of votes documents",
         "responses": {
           "200": {
             "description": "Retrieve votes document(s)",

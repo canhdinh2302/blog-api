@@ -253,7 +253,7 @@
     "/tags/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of tags documents",
+        "description": "Retrieve the number of tags documents",
         "responses": {
           "200": {
             "description": "Retrieve tags document(s)",
